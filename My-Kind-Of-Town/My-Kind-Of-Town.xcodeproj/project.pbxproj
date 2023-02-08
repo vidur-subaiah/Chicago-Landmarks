@@ -14,6 +14,11 @@
 		033A5406299085F900C08ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033A5405299085F900C08ECC /* Assets.xcassets */; };
 		033A5409299085F900C08ECC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033A5407299085F900C08ECC /* LaunchScreen.storyboard */; };
 		033A5411299086F900C08ECC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A5410299086F900C08ECC /* MapViewController.swift */; };
+		033A54132991A22E00C08ECC /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 033A54122991A22E00C08ECC /* Data.plist */; };
+		033A54152991A92800C08ECC /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A54142991A92800C08ECC /* Place.swift */; };
+		033A54172991AABC00C08ECC /* PlaceMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A54162991AABC00C08ECC /* PlaceMarkerView.swift */; };
+		033A541B2992E0A700C08ECC /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A541A2992E0A700C08ECC /* FavoritesViewController.swift */; };
+		033A541D2993009E00C08ECC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A541C2993009E00C08ECC /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		033A5408299085F900C08ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		033A540A299085F900C08ECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		033A5410299086F900C08ECC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		033A54122991A22E00C08ECC /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+		033A54142991A92800C08ECC /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		033A54162991AABC00C08ECC /* PlaceMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarkerView.swift; sourceTree = "<group>"; };
+		033A541A2992E0A700C08ECC /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		033A541C2993009E00C08ECC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +72,15 @@
 				033A53FE299085F700C08ECC /* SceneDelegate.swift */,
 				033A5400299085F700C08ECC /* ViewController.swift */,
 				033A5402299085F700C08ECC /* Main.storyboard */,
+				033A541A2992E0A700C08ECC /* FavoritesViewController.swift */,
+				033A541C2993009E00C08ECC /* DataManager.swift */,
 				033A5410299086F900C08ECC /* MapViewController.swift */,
+				033A54142991A92800C08ECC /* Place.swift */,
+				033A54162991AABC00C08ECC /* PlaceMarkerView.swift */,
 				033A5405299085F900C08ECC /* Assets.xcassets */,
 				033A5407299085F900C08ECC /* LaunchScreen.storyboard */,
 				033A540A299085F900C08ECC /* Info.plist */,
+				033A54122991A22E00C08ECC /* Data.plist */,
 			);
 			path = "My-Kind-Of-Town";
 			sourceTree = "<group>";
@@ -130,6 +145,7 @@
 			files = (
 				033A5409299085F900C08ECC /* LaunchScreen.storyboard in Resources */,
 				033A5406299085F900C08ECC /* Assets.xcassets in Resources */,
+				033A54132991A22E00C08ECC /* Data.plist in Resources */,
 				033A5404299085F700C08ECC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,10 +157,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033A54172991AABC00C08ECC /* PlaceMarkerView.swift in Sources */,
+				033A541D2993009E00C08ECC /* DataManager.swift in Sources */,
 				033A5401299085F700C08ECC /* ViewController.swift in Sources */,
+				033A541B2992E0A700C08ECC /* FavoritesViewController.swift in Sources */,
 				033A53FD299085F700C08ECC /* AppDelegate.swift in Sources */,
 				033A53FF299085F700C08ECC /* SceneDelegate.swift in Sources */,
 				033A5411299086F900C08ECC /* MapViewController.swift in Sources */,
+				033A54152991A92800C08ECC /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
