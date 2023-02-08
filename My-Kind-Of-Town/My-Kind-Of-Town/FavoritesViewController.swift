@@ -11,6 +11,8 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var favoritesTableView: UITableView!
     
+    weak var delegate: PlacesFavoriteDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,10 +48,13 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         cell.textLabel?.text = DataManager.sharedInstance.favorites[indexPath.row]
         return cell
     }
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nameOfPlace = DataManager.sharedInstance.favorites[indexPath.row]
+        print(nameOfPlace)
+        delegate?.favoritePlace(name: nameOfPlace)
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func closeButtonPress(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)

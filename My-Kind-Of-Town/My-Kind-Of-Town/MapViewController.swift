@@ -92,6 +92,8 @@ class MapViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let favoritesViewController = storyboard.instantiateViewController(identifier: "favorites") as! FavoritesViewController
         // Attribution: https://stackoverflow.com/questions/39450124/swift-programmatically-navigate-to-another-view-controller-scene
+        // Attribution: https://stackoverflow.com/questions/45214007/protocol-delegate-method-is-not-called-in-swift
+        favoritesViewController.delegate = self
         self.present(favoritesViewController, animated: true, completion: nil)
     }
 }
@@ -117,4 +119,24 @@ extension MapViewController: MKMapViewDelegate {
         self.labelDescription.text = annotation.longDescription
         self.informationViewLabel.isHidden = false
     }
+    
+}
+
+extension MapViewController: PlacesFavoriteDelegate {
+    func favoritePlace(name: String){
+        // load the map based on the favorite place
+        // Attribution: https://stackoverflow.com/questions/46923762/how-to-update-any-specific-mkannotationview-image-on-click-button-from-navigatio
+        print("hello")
+        for annotation in self.mapView.annotations {
+            if (annotation.title == name) {
+                let annotationView = self.mapView.view(for: annotation)!
+                annotationView.isSelected = true
+                self.mapView.delegate?.mapView?(self.mapView, didSelect: annotationView)
+            }
+        }
+    }
+}
+
+protocol PlacesFavoriteDelegate: AnyObject {
+  func favoritePlace(name: String) -> Void
 }
